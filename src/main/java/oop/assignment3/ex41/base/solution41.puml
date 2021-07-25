@@ -1,0 +1,9 @@
+@startuml
+class solution41
+{
++inputName()
++outputName()
++main()
+}
+
+@enduml
