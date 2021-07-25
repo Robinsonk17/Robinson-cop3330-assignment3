@@ -1,0 +1,14 @@
+@startuml
+class solution46
+{
++main()
+}
+
+class wordCount
+{
++wordCount()
++printData()
+}
+
+solution46 -> wordCount
+@enduml
