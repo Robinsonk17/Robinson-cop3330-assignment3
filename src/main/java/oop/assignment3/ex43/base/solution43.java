@@ -12,32 +12,38 @@ public class solution43 {
 
         Scanner newScan = new Scanner(System.in);
 
+        // declare string siteName, author, wantCSS, and wantJS to be caled
         String siteName;
         String author;
-        String wantCSS;
-        String wantJS;
+        boolean wantCSS;
+        boolean wantJS;
 
+        // Print site name and author, prompt for user input
         System.out.print("Site name: ");
         siteName = newScan.nextLine();
         System.out.print("Author: ");
         author = newScan.nextLine();
+        // ask user if folder for CSS and JavaScript is wanted
+        // prompt user for input
         System.out.print("Do you want a folder for JavaScript? ");
-        wantJS = newScan.nextLine();
+        wantJS = newScan.nextLine().equals("y");
         System.out.print("Do you want a folder for CSS? ");
-        wantCSS = newScan.nextLine();
+        wantCSS = newScan.nextLine().equals("y");
         WebsiteGenerator newWebsite = new WebsiteGenerator();
 
+        // set user input to new website properties
         newWebsite.siteName = siteName;
         newWebsite.author = author;
-        newWebsite.path = "src/main/java/ex43/";
+        newWebsite.path = System.getProperty("user.dir");
 
+        //print created website information
         System.out.println("Created " + newWebsite.createWebsite());
         System.out.println("Created " + newWebsite.createHTMl());
 
-        if(wantJS.equals("y"))
+        if (wantJS)
             System.out.println("Created " + newWebsite.createJSFolder());
 
-        if(wantCSS.equals("y"))
+        if (wantCSS)
             System.out.println("Created " + newWebsite.createCSSFolder());
 
     }
