@@ -1,0 +1,16 @@
+@startuml
+class solution43
+{
+Main()
+}
+
+class websiteGenerator
+{
++createWebsite()
++createJSFolder()
++createCSSFolder()
++createHTML()
+}
+
+solution43 -> websiteGenerator
+@enduml
