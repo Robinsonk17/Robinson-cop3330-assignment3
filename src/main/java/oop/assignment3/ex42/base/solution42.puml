@@ -1,0 +1,8 @@
+@startuml
+class solution42
+{
+Main()
+parseInout()
+
+}
+@enduml
